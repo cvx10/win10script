@@ -7,12 +7,12 @@ $tweaks = @(
 	"RequireAdmin",
 
 	### Installation des applications de base via chocolatey
-	"InstallChocolatey", #REQUIRED FOR OTHER PROGRAMS INSTALLS!
+	"InstallChocolatey", #Nécessaire pour l'installation des applications ci-dessous!
 	"InstallAdobe",
 	"Install7Zip",
 	"InstallNotepadplusplus",
-	"InstallChrome"
-	"InstallFirefox"
+	"InstallChrome",
+	"InstallFirefox",
 
 	### Windows Apps
 	"DebloatAll",
