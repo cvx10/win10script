@@ -1,40 +1,18 @@
 ##########
-# Tweaked Win10 Initial Setup Script
-# Primary Author: Disassembler <disassembler@dasm.cz>
-# Primary Author Source: https://github.com/Disassembler0/Win10-Initial-Setup-Script
-# Tweaked Source: https://gist.github.com/alirobe/7f3b34ad89a159e6daa1/
-#
-#    If you're a power user looking to tweak your machinea, or doing larger roll-out.. 
-#    Use the @Disassembler0 script instead. It'll probably be more up-to-date than mine:
-#    https://github.com/Disassembler0/Win10-Initial-Setup-Script
-# 
-#    Note from author: Never run scripts without reading them & understanding what they do.
-#
-#	Addition: One command to rule them all, One command to find it, and One command to Run it! 
-#
-#     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJ8R4')"
-#
-#	Chris Titus Additions:
-#
-#	- Dark Mode
-#	- One Command to launch and run
-#	- Chocolatey Install
-#	- O&O Shutup10 CFG and Run
-#	- Added Install Programs
-#	- Added Debloat Microsoft Store Apps
-#
+#     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJ8R4')" --> lien à modifier avec ma propre URL
 ##########
-# Default preset
+
 $tweaks = @(
 	### Require administrator privileges ###
 	"RequireAdmin",
 
 	### External Program Setup
-	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
+	"InstallChocolatey", #REQUIRED FOR OTHER PROGRAMS INSTALLS!
 	"InstallAdobe",
 	"Install7Zip",
 	"InstallNotepadplusplus",
-	"InstallMediaPlayerClassic",
+	"InstallChrome"
+	"InstallFirefox"
 
 	### Windows Apps
 	"DebloatAll",
@@ -187,18 +165,13 @@ $tweaks = @(
 )
 
 #########
-# Recommended Titus Programs
+# Installation des applications de base
 #########
 
-Function InstallTitusProgs {
+Function InstallChocolatey {
 	Write-Output "Installing Chocolatey"
 	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 	choco install chocolatey-core.extension -y
-	Write-Output "Running O&O Shutup with Recommended Settings"
-	Import-Module BitsTransfer
-	Start-BitsTransfer -Source "https://raw.githubusercontent.com/ChrisTitusTech/win10script/master/ooshutup10.cfg" -Destination ooshutup10.cfg
-	Start-BitsTransfer -Source "https://dl5.oo-software.com/files/ooshutup10/OOSU10.exe" -Destination OOSU10.exe
-	./OOSU10.exe ooshutup10.cfg /quiet
 }
 
 Function InstallAdobe {
@@ -221,9 +194,14 @@ Function InstallNotepadplusplus {
 	choco install notepadplusplus -y
 }
 
-Function InstallMediaPlayerClassic {
-	Write-Output "Installing Media Player Classic (VLC Alternative)"
-	choco install mpc-hc -y
+Function InstallChrome {
+	Write-Output "Installing Google Chrome"
+	choco install googlechrome -y
+}
+
+Function InstallFirefox {
+	Write-Output "Installing Mozilla Firefox"
+	choco install firefox
 }
 
 ##########
