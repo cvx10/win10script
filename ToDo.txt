@@ -2,5 +2,8 @@
 - Chrome par défaut
 - Adobe reader par défaut
 - Suppression des icones inutiles sur le bureau
+- Désinstallation de Cortana
+- Désinstallation de "Courrier et calendrier"
+- Désinstallation de "Portail de réalité mixte"
 - Installation Office365 ?
 - Epinglage des applications de base sur la barre des tâches
