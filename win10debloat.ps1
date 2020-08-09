@@ -3,13 +3,11 @@
 #     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJMU2')"
 ##########
 
+$tvwindamnet = "https://www.damnet.coop/tvwin.exe"
+
 $tweaks = @(
 	### Require administrator privileges ###
 	"RequireAdmin",
-
-	### Teamviewer Damnet
-	"TeamViewerDamnet",
-	$tvwindamnet = "https://www.damnet.coop/tvwin.exe"
 
 	### Installation des applications de base via chocolatey
 	"InstallChocolatey", #Nécessaire pour l'installation des applications ci-dessous!
@@ -18,6 +16,9 @@ $tweaks = @(
 	"InstallNotepadplusplus",
 	"InstallChrome",
 	"InstallFirefox",
+
+	### Teamviewer Damnet
+	"TeamViewerDamnet",
 
 	### Windows Apps
 	"DebloatAll",
