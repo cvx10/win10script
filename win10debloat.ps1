@@ -477,7 +477,8 @@ Function DebloatAll {
 
     $Bloatware = @(
         #Unnecessary Windows 10 AppX Apps
-        "Microsoft.BingNews"
+		"Microsoft.BingNews"
+		"Microsoft.Cortana"
         "Microsoft.Microsoft3DViewer"
         "Microsoft.MicrosoftSolitaireCollection"
         "Microsoft.NetworkSpeedTest"

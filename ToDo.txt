@@ -1,6 +1,5 @@
-- Télécharger et placer le TeamViewer de Damnet sur le public desktop
-- Chrome par défaut
-- Adobe reader par défaut
+- Chrome par défaut --> pas facile... A voir...
+- Adobe reader par défaut --> pas facile... A voir...
 - Suppression des icones inutiles sur le bureau
 - Désinstallation de Cortana
 - Désinstallation de "Courrier et calendrier"
