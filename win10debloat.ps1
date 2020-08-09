@@ -1,5 +1,5 @@
 ##########
-#     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJ8R4')" --> lien à modifier avec ma propre URL
+#     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJMU2')"
 ##########
 
 $tweaks = @(
