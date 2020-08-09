@@ -1,3 +1,6 @@
 - Télécharger et placer le TeamViewer de Damnet sur le public desktop
 - Chrome par défaut
 - Adobe reader par défaut
+- Suppression des icones inutiles sur le bureau
+- Installation Office365 ?
+- Epinglage des applications de base sur la barre des tâches
