@@ -1,10 +1,15 @@
 ##########
+#     > Ci-dessous, la commande powershell à exécuter dans une fenêtre powershell admin.
 #     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJMU2')"
 ##########
 
 $tweaks = @(
 	### Require administrator privileges ###
 	"RequireAdmin",
+
+	### Teamviewer Damnet
+	"TeamViewerDamnet",
+	$tvwindamnet = "https://www.damnet.coop/tvwin.exe"
 
 	### Installation des applications de base via chocolatey
 	"InstallChocolatey", #Nécessaire pour l'installation des applications ci-dessous!
@@ -59,9 +64,17 @@ $tweaks = @(
 )
 
 #########
+# Téléchargement du Teamviewer de Damnet et placement dans le public desktop
+#########
+Function TeamViewerDamnet{
+	Write-Output "Telechargement du Teamviewer de Damnet"
+	Invoke-WebRequest -Uri $tvwindamnet -OutFile C:\Users\Public\Desktop\TeamViewerDamnet.exe
+}
+
+
+#########
 # Installation des applications de base
 #########
-
 Function InstallChocolatey {
 	Write-Output "Installing Chocolatey"
 	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
