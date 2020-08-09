@@ -377,6 +377,9 @@ Function UninstallMsftBloat {
 	Get-AppxPackage "Microsoft.Wallet" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.ZuneMusic" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.ZuneVideo" | Remove-AppxPackage
+	Get-AppxPackage *communi* | Remove-AppxPackage
+	Get-AppxPackage -AllUsers -Name Microsoft.WindowsMaps | Remove-AppxPackage
+	Get-AppxPackage Microsoft.MixedReality.Portal | Remove-AppxPackage
 }
 
 # Uninstall default third party applications
@@ -478,7 +481,6 @@ Function DebloatAll {
     $Bloatware = @(
         #Unnecessary Windows 10 AppX Apps
 		"Microsoft.BingNews"
-		"Microsoft.Cortana"
         "Microsoft.Microsoft3DViewer"
         "Microsoft.MicrosoftSolitaireCollection"
         "Microsoft.NetworkSpeedTest"
