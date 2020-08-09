@@ -1,1 +1,3 @@
 - Télécharger et placer le TeamViewer de Damnet sur le public desktop
+- Chrome par défaut
+- Adobe reader par défaut
