@@ -114,6 +114,7 @@ Function TeamViewerDamnet{
 ##########
 
 # Disable Web Search in Start Menu
+# --> Ne semble pas fonctionner correctement. A voir
 Function DisableWebSearch {
 	Write-Output "Disabling Bing Search in Start Menu..."
 	Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" -Name "BingSearchEnabled" -Type DWord -Value 0

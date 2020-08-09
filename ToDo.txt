@@ -3,4 +3,5 @@
 - Suppression des icones inutiles sur le bureau
 - Désinstallation de Cortana --> pas facile... A voir...
 - Installation Office365 ?
+- Problème avec la fonction de désactivation du websearch
 - Epinglage des applications de base sur la barre des tâches
