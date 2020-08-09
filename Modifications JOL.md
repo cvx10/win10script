@@ -7,3 +7,4 @@ Le but premier va être de le simplifier et de le rendre moins extrême pour qu'
 - Ajout de l'installation de chrome (choco)
 - Ajout de l'installation de firefox (choco)
 - Remplacé le "InstallTitusPrograms" par "InstallCHocolatey"
+- Test
