@@ -3,8 +3,6 @@
 #     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJMU2')"
 ##########
 
-$tvwindamnet = "https://www.damnet.coop/tvwin.exe"
-
 $tweaks = @(
 	### Require administrator privileges ###
 	"RequireAdmin",
@@ -65,15 +63,6 @@ $tweaks = @(
 )
 
 #########
-# Téléchargement du Teamviewer de Damnet et placement dans le public desktop
-#########
-Function TeamViewerDamnet{
-	Write-Output "Telechargement du Teamviewer de Damnet"
-	Invoke-WebRequest -Uri $tvwindamnet -OutFile C:\Users\Public\Desktop\TeamViewerDamnet.exe
-}
-
-
-#########
 # Installation des applications de base
 #########
 Function InstallChocolatey {
@@ -110,6 +99,14 @@ Function InstallChrome {
 Function InstallFirefox {
 	Write-Output "Installing Mozilla Firefox"
 	choco install firefox -y
+}
+
+#########
+# Téléchargement du Teamviewer de Damnet et placement dans le public desktop
+#########
+Function TeamViewerDamnet{
+	Write-Output "Telechargement du Teamviewer de Damnet"
+	Invoke-WebRequest -Uri 'https://www.damnet.coop/tvwin.exe' -OutFile C:\Users\Public\Desktop\TeamViewerDamnet.exe
 }
 
 ##########
