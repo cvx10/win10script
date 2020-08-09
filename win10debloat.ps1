@@ -95,7 +95,7 @@ Function InstallChrome {
 
 Function InstallFirefox {
 	Write-Output "Installing Mozilla Firefox"
-	choco install firefox
+	choco install firefox -y
 }
 
 ##########
